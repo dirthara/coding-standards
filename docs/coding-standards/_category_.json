@@ -1,0 +1,10 @@
+{
+  "label": "Standards",
+  "position": 2,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Standards",
+    "description": "How a Dirthara package is written: the language baseline, the layout, the types, the failures, the tests, and what ships."
+  }
+}
