@@ -13,7 +13,7 @@ The README covers the repository, not the API. In order:
 1. The logo, centred above the title, linked by **relative** path. An absolute `raw.githubusercontent.com` URL names one
    branch and is wrong on every other one, and packages have a branch per version.
 2. A short description of the package, linking to the documentation site at
-   <https://dirthara.github.io/docs/>. Every package points there, so a reader
+   [dirthara.github.io/docs](https://dirthara.github.io/docs/). Every package points there, so a reader
    who lands on any repository can reach the whole framework.
 3. Installation and requirements.
 4. The local development environment.
@@ -35,7 +35,7 @@ together.
 ## Usage Documentation
 
 `docs/` holds the usage documentation as markdown files. The `dirthara/docs` repository pulls these files at the ref 
-each version pins and builds <https://dirthara.github.io/docs/> from them with Docusaurus, so write them as
+each version pins and builds [the documentation site](https://dirthara.github.io/docs/) from them with Docusaurus, so write them as
 if they are already on that site. A package never publishes a site of its own.
 
 The conventions the build depends on:

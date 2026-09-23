@@ -11,5 +11,5 @@ rules that make that true.
 ## Changing a standard
 
 If you propose a change to any of these standards, make sure to also update the tooling that enforces the standards in
-the template repository <https://github.com/dirthara/package-template>. When doing this, also make sure to update
+the template repository [dirthara/package-template](https://github.com/dirthara/package-template). When doing this, also make sure to update
 the configuration files in each package so the new standard is enforced from the next version on.
