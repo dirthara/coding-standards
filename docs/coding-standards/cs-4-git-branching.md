@@ -34,12 +34,13 @@ Work happens on a short-lived branch and arrives through a pull request. Name it
 - `hotfix/`
 - `task/`
 
-The prefix MUST be followed by the relevant ticket number, followed by a short description of the work in the branch:
+You SHOULD work with a ticket, and create one before creating the branch when none exists yet. When there is a ticket,
+the prefix MUST be followed by its number, followed by a short description of the work in the branch:
 
 - `feature/66-name-of-the-feature`
 - `bugfix/2-short-bug-description`
 
-If no ticket number is available, a ticket SHOULD be created before creating the branch.
+Without a ticket, the prefix is followed by the short description alone, such as `task/update-coding-standards`.
 
 What you target depends on what you are doing:
 
@@ -82,7 +83,7 @@ matrix.
 
 ## 3. Commits
 
-* Commit messages MUST contain the relevant ticket number.
+* You SHOULD work with a ticket. When there is one, commit messages MUST contain its number.
 * Commit messages SHOULD be short and descriptive, no longer than a single line of 120 characters.
 * You SHOULD split your work into multiple smaller commits, to keep the commit messages short.
 * You MAY use temporary commits like `WIP`, for instance to commit your work at the end of the day, but these commits

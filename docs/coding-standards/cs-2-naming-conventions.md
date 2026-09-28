@@ -42,3 +42,15 @@ sure the namespace is correct and use a descriptive name for the class that actu
 
 When creating new packages use a short and descriptive name for the package. The framework name itself is where the 
 cool name lives, but when using the packages it SHOULD be immediately clear what the package does.
+
+## 3. Language
+
+Every package is written in British English. That covers class, method, property, and variable names, exception and
+denial messages, comments, documentation, and commit messages.
+
+* Spelling MUST be British English: `authorise`, `behaviour`, `colour`, `initialise`, `normalise`, `serialise`,
+  `catalogue`, and `licence` for the noun.
+* A name fixed outside the package keeps its own spelling. PHP's `JsonSerializable`, a dependency's `initialize()`, a
+  tool's `composer analyze`, and the `license` key in `composer.json` are not renamed, and a class that implements or
+  wraps them uses the spelling they require.
+* A package MUST NOT offer both spellings of the same name, such as an `authorize()` alias for `authorise()`.

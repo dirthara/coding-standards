@@ -59,5 +59,7 @@ Document how the package is used, which options exist, and what each one means. 
 default, and meaning. Say why a default is what it is when the reason is not obvious, and describe the behaviour that
 will surprise someone *before* they hit it.
 
+Write in British English, as [CS-2](cs-2-naming-conventions.md#3-language) requires for everything in a package.
+
 Keep it truthful against the source. When behaviour changes, the page that describes it changes in the same pull 
 request. A pull request that changes behaviour and not its documentation is incomplete, and will be declined.

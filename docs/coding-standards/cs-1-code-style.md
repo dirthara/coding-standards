@@ -113,7 +113,7 @@ class D
 * There SHOULD be no empty lines between use statements.
 * Use statements MUST be ordered by length.
 * All classes, interfaces and traits SHOULD be imported via a `use` statement.
-* All root-level PHP functions and classes SHOULD be imported via a `use` statement.
+* All root-level PHP functions, classes, and constants SHOULD be imported via a `use` statement.
 * `use` declarations MUST be grouped in `use` declarations that import classes, functions and constants, with an
   empty line between each block.
 

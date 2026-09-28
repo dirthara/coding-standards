@@ -78,7 +78,8 @@ public static function invalidPort(int $port): self
 - **The factory name is the failure**, read from the throw site: `throw UploadedFileException::alreadyMoved();`.
 - **A factory that wraps takes the original**, as `forInvalidUri(string $uri, ?Throwable $previous = null)` does, and
   passes it as `previous:`.
-- Error messages are written in English and SHOULD contain a detailed error message. 
+- Error messages are written in British English, see [CS-2](cs-2-naming-conventions.md#3-language), and SHOULD
+  contain a detailed error message. 
 - A package never logs and never depends on a logger.
 
 :::danger
