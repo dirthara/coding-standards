@@ -4,13 +4,13 @@
 
 # Dirthara Coding Standards
 
-The coding standards every Dirthara package has to adhere to. These standards are published as part of the 
+The coding standards every Dirthara package has to adhere to. These standards are published as part of the
 documentation site <https://dirthara.github.io/docs/>, which documents the whole framework.
 
 ## Changing a standard
 
-If you propose a change to any of these standards, make sure to also update the tooling that enforces the standards in 
-the template repository <https://github.com/dirthara/package-template>. When doing this, also make sure to update 
+If you propose a change to any of these standards, make sure to also update the tooling that enforces the standards in
+the template repository <https://github.com/dirthara/package-template>. When doing this, also make sure to update
 the configuration files in each package so the new standard is enforced from the next version on.
 
 ## Security

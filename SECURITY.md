@@ -16,7 +16,7 @@ certainly belongs to a package. Report it privately against the package that has
 vulnerability** form on that repository. Do not disclose vulnerabilities in public issues or pull requests.
 
 If the problem is here, a standard that tells a maintainer to do something unsafe, such as a page recommending an
-insecure default or a weakened check, report it privately through this repository's [Report a vulnerability](https://github.com/dirthara/coding-standards/security/advisories/new) form. 
+insecure default or a weakened check, report it privately through this repository's [Report a vulnerability](https://github.com/dirthara/coding-standards/security/advisories/new) form.
 A wrong rule reaches every package, so it is treated as a vulnerability rather than a documentation bug.
 
 Include the page or commit, what the rule leads a maintainer to do, and the impact. Maintainers will acknowledge and

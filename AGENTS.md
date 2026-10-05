@@ -10,7 +10,7 @@ It holds the coding standards every Dirthara package is written to, as markdown 
 no `composer.json`, and no release.
 
 It also holds no enforcement. `mago.toml`, `phpunit.xml`, `scripts/`, the CI workflow, and `.gitattributes` live in
-[`dirthara/package-template`](https://github.com/dirthara/package-template), which every package is copied from. A page here describes a check; it does not 
+[`dirthara/package-template`](https://github.com/dirthara/package-template), which every package is copied from. A page here describes a check; it does not
 configure one.
 
 ## A rule and its enforcement change together

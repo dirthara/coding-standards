@@ -402,3 +402,66 @@ final readonly class FileService implements FileServiceContract
 ## 16. File endings
 
 * There should be no newline at the end of the file.
+
+## 17. Static methods and closures
+
+### 17.1. Static methods
+
+A method SHOULD only be declared `static` when there is a reason it has to be available outside object context. The
+reason is the exception; an instance method is the default.
+
+* Named constructors and factories MAY be declared `static`. This is the basic case, and the static factories on
+  exceptions described in [CS-7](./cs-7-exceptions-error-handling.md) are an example of it.
+* Any other public method MAY be declared `static` only when there is a reason it has to be called without an instance.
+* Stateless helpers that are `private` to a class SHOULD be instance methods.
+* Stateless helpers that are `public` MAY be declared `static`, but a class of public static utilities is an
+  architecture pattern that SHOULD be avoided. Prefer an instance that can be injected.
+
+```php
+<?php
+
+final readonly class Port
+{
+    private function __construct(
+        private int $number,
+    ) {
+    }
+
+    // A named constructor: there is no instance to call it on yet.
+    public static function fromString(string $port): self
+    {
+        return new self(self::parse($port));
+    }
+
+    // Avoid: a private helper SHOULD be an instance method, or inlined.
+    private static function parse(string $port): int
+    {
+        return (int) $port;
+    }
+}
+```
+
+:::note
+No tool checks this rule; it is enforced in review. Existing static methods MAY stay as they are, and the rule applies
+to new code.
+:::
+
+### 17.2. Closures
+
+Closures and arrow functions MUST be declared `static` unless they use `$this`.
+
+```php
+<?php
+
+// Correct: the closure does not use $this.
+$doubled = array_map(static fn(int $number): int => $number * 2, $numbers);
+
+// Correct: the closure uses $this, so it cannot be static.
+$quoted = array_map(fn(string $name): string => $this->quote($name), $names);
+```
+
+A static closure does not bind `$this`, so it does not keep the object it was created in alive, and it states at a
+glance that it does not depend on that object.
+
+Mago's `prefer-static-closure` rule enforces this as an error. `composer lint` reports a closure that should be static,
+and `composer lint-fix` adds the keyword.
